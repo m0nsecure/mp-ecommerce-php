@@ -42,31 +42,6 @@
 
 
 <body class="as-theme-light-heroimage">
-    
-    <?php
-    
-// SDK de Mercado Pago
-require __DIR__ .  '/vendor/autoload.php';
-
-// Agrega credenciales
-MercadoPago\SDK::setAccessToken('APP_USR-1852356749457654-092104-5b92012a4245fda146694496ced7aae5-8481682');
-
-// Crea un objeto de preferencia
-$preference = new MercadoPago\Preference();
-
-$product1 = ['Samsung S9', 1, '15,000'];
-
-// Crea un ítem en la preferencia
-$item = new MercadoPago\Item();
-$item->id = "00001";
-$item->title = $product1[0];
-$item->quantity = $product1[1];
-$item->unit_price = str_replace(',', '.', $product1[2]);
-$preference->items = array($item);
-$preference->save();
-?>
-    
-    
 
     <div class="stack">
         
@@ -287,12 +262,7 @@ $preference->save();
                                             <input type="hidden" name="title" value="Samsung Galaxy S9">
                                             <input type="hidden" name="price" value="15000">
                                             <input type="hidden" name="unit" value="1">
-                                            <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button><form action="/procesar-pago" method="POST">
-  <script
-   src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-   data-preference-id="<?php echo $preference->id; ?>">
-  </script>
-</form>
+                                            <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
                                         </form>
                                     </div>
                                 </div>
