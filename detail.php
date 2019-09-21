@@ -131,9 +131,6 @@
                                         </h3>
                                     </div>
                                     <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
-                                    
-                              
-                                    
                                 </div>
                             </div>
                         </div>
