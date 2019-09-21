@@ -42,6 +42,31 @@
 
 
 <body class="as-theme-light-heroimage">
+    
+    <?php
+    
+// SDK de Mercado Pago
+require __DIR__ .  '/vendor/autoload.php';
+
+// Agrega credenciales
+MercadoPago\SDK::setAccessToken('APP_USR-1852356749457654-092104-5b92012a4245fda146694496ced7aae5-8481682');
+
+// Crea un objeto de preferencia
+$preference = new MercadoPago\Preference();
+
+$product1 = ['Samsung S9', 1, '15,000'];
+
+// Crea un ítem en la preferencia
+$item = new MercadoPago\Item();
+$item->id = "00001";
+$item->title = $product1[0];
+$item->quantity = $product1[1];
+$item->unit_price = str_replace(',', '.', $product1[2]);
+$preference->items = array($item);
+$preference->save();
+?>
+    
+    
 
     <div class="stack">
         
