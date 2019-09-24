@@ -2,7 +2,7 @@
 // SDK de Mercado Pago
 require __DIR__ .  '/vendor/autoload.php';
 // Agrega credenciales
-MercadoPago\SDK::setAccessToken('TEST-555894209657742-022517-d6f9fa55ba6a66797760d013da8d49b7__LA_LB__-181662021');
+MercadoPago\SDK::setAccessToken('TEST-8846292840288199-121215-4d2089706e6737fd56f4c1adacb9a2b4-256588776');
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
 // Crea un ítem en la preferencia
